@@ -12,13 +12,14 @@
   },
   "dependencies": {
     "iscool": "^1.1.7",
-    "wordfilter": "^0.2.1",
-    "yargs": "^3.18.0"
-  },
-  "bin": {
-    "mkproj": "cmd.js"
+    "wordfilter": "^0.2.1"
   },
   "license": "MIT",
-  "description": "this-is-probably-ok-to-say ----------------",
-  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)"
+  "description": "wrapper around iscool and wordfilter",
+  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
+  "keywords": [
+    "filter",
+    "words",
+    "content"
+  ]
 }
