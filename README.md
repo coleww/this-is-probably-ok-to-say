@@ -13,7 +13,7 @@ TIPOTS!
 
 This module just wraps around several other modules to try to determine whether or not a given string is probably ok to say. 
 
-wordfilter iscool are awesome tools, but installing them on every public facing project is a pain. want to just require and check
+[wordfilter](https://www.npmjs.com/package/wordfilter) and [iscool](https://www.npmjs.com/package/iscool) are awesome tools, but installing them on every public facing project is a pain. Also wordfilter returns true if a string is bad and iscool returns true if a string is ok, which gets...confusing. I wanted to be able to just require one thing that has 1 method that just returns true/false. Plus maybe this could do other stuff later, like when a third content filter node module pops up, or some bayes filter jerk detection.
 
 ### EXAMPLE
 
