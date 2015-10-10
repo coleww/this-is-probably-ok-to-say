@@ -2,8 +2,7 @@
 var isCool = require('iscool')()
 
 module.exports = function (str) {
-  return str.split(' ').every(function (word) {
-    var nw = word.match(/\w+/)
-    return nw ? isCool(nw[0]) : true
+  return str.split('\W').every(function (word) {
+    return !!word ? isCool(word) : true
   })
 }

@@ -1,6 +1,6 @@
 {
   "name": "this-is-probably-ok-to-say",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "test": "standard && node test.js",
