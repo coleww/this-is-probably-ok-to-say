@@ -1,8 +1,9 @@
-var wordfilter = require('wordfilter')
 
-var createIsCool = require('iscool')
-var isCool = createIsCool()
+var isCool = require('iscool')()
 
 module.exports = function (str) {
-  return !wordfilter.blacklisted(str) && isCool(str)
+  return str.split(' ').every(function (word) {
+    var nw = word.match(/\w+/)
+    return nw ? isCool(nw[0]) : true
+  })
 }
