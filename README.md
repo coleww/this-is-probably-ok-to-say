@@ -1,6 +1,9 @@
 this-is-probably-ok-to-say
 ----------------
 
+## TW: this module is meant to filter out problematic language, as such there may be triggering content in the source code and/or dependencies. 
+
+
 this just wraps [iscool](http://github.com/jimkang/iscool) so that it's easier to toss a sentence at it
 
 
