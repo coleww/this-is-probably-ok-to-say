@@ -11,3 +11,9 @@ tap.test('true for good words', function (t) {
   t.plan(1)
   t.ok(thisIsProbablyOkToSay('peace unto the world'))
 })
+
+tap.test('false for bad sequences', function (t) {
+  t.plan(2)
+  t.ok(!thisIsProbablyOkToSay('have a personality disorder'))
+  t.ok(thisIsProbablyOkToSay('despite the disorder of society i have a great personality'))
+})

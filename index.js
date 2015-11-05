@@ -1,46 +1,15 @@
-
-var isCool = require('iscool')({  tragedyHappenedRecently: true,
-  customBlacklist: [
-  'cry', 'crying', 'tears', 'loss',
-    'sad',
-    'tragedy',
-    'barren',
-    'blind',
-    'bound',
-    'crazy',
-    'cripple',
-    'crippled',
-    'daft',
-    'deaf',
-    'derp',
-    'dumb',
-    'feeble',
-    'handicap',
-    'handicapped',
-    'idiot',
-    'imbecile',
-    'insane',
-    'invalid',
-    'lame',
-    'loon',
-    'lunatic',
-    'madhouse',
-    'mental',
-    'mongoloid',
-    'manic',
-    'nuts',
-    'moron',
-    'psycho',
-    'retard',
-    'spaz',
-'stupid'
-
-
-
- ] })
+var customList = require('./customList')
+var isCool = require('iscool')({tragedyHappenedRecently: true, customBlacklist: customList})
+var badSequences = require('./badSequences')
 
 module.exports = function (str) {
-  return str.split('\W').every(function (word) {
-    return !!word ? isCool(word) : true
-  })
+    var words = str.split(/\W/).filter(function (x) {return !!x}).map(function (w) {return w.toLowerCase()})
+
+    return words.every(function (word) {
+        return isCool(word)
+    }) && badSequences.every(function (seq) {
+        var seqWords = seq.split(' ')
+        var i = words.indexOf(seqWords[0])
+        return !(i !== -1 && words.indexOf(seqWords[1]) === i + 1)
+    })
 }
