@@ -11,7 +11,7 @@
     "standard": "4.5.4"
   },
   "dependencies": {
-    "iscool": "^1.1.7"
+    "iscool": "^1.1.11"
   },
   "license": "MIT",
   "description": "wrapper around iscool",
