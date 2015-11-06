@@ -66,6 +66,7 @@ module.exports = [
     'lunatic',
     'madhouse',
     'mental',
+    'mong',
     'mongoloid',
     'manic',
     'nuts',
