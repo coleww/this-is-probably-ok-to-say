@@ -3,7 +3,7 @@
   "version": "1.0.8",
   "main": "index.js",
   "scripts": {
-    "test": "standard && node test.js"
+    "test": "node test.js"
   },
   "devDependencies": {
     "tap": "^1.3.2",
