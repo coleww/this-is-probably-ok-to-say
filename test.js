@@ -17,3 +17,9 @@ tap.test('false for bad sequences', function (t) {
   t.ok(!thisIsProbablyOkToSay('have a personality disorder'))
   t.ok(thisIsProbablyOkToSay('despite the disorder of society i have a great personality'))
 })
+
+tap.test('false for negative sensitive sequences', function (t) {
+  t.plan(2)
+  t.ok(!thisIsProbablyOkToSay('americans are crappy depressed sad hate hate pain'))
+  t.ok(thisIsProbablyOkToSay('i love americans so much, passionately.'))
+})
